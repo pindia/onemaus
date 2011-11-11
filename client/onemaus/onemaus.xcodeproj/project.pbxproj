@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91A3A9AE146CC8630002E52B /* ServerCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A3A9AD146CC8630002E52B /* ServerCommunication.m */; };
 		FB7FF190146CBFDB002739B5 /* MouseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7FF18F146CBFDB002739B5 /* MouseButton.m */; };
 		FB99A48D146CB32D004A4C37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB99A48C146CB32D004A4C37 /* UIKit.framework */; };
 		FB99A48F146CB32D004A4C37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB99A48E146CB32D004A4C37 /* Foundation.framework */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		91A3A9AC146CC8630002E52B /* ServerCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerCommunication.h; sourceTree = "<group>"; };
+		91A3A9AD146CC8630002E52B /* ServerCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerCommunication.m; sourceTree = "<group>"; };
 		FB7FF18E146CBFDB002739B5 /* MouseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MouseButton.h; sourceTree = "<group>"; };
 		FB7FF18F146CBFDB002739B5 /* MouseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MouseButton.m; sourceTree = "<group>"; };
 		FB99A488146CB32D004A4C37 /* onemaus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onemaus.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +94,8 @@
 				FB7FF18F146CBFDB002739B5 /* MouseButton.m */,
 				FB99A4A4146CB32D004A4C37 /* ViewController_iPad.xib */,
 				FB99A493146CB32D004A4C37 /* Supporting Files */,
+				91A3A9AC146CC8630002E52B /* ServerCommunication.h */,
+				91A3A9AD146CC8630002E52B /* ServerCommunication.m */,
 			);
 			path = onemaus;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 				FB99A49D146CB32D004A4C37 /* AppDelegate.m in Sources */,
 				FB99A4A0146CB32D004A4C37 /* ViewController.m in Sources */,
 				FB7FF190146CBFDB002739B5 /* MouseButton.m in Sources */,
+				91A3A9AE146CC8630002E52B /* ServerCommunication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
