@@ -11,16 +11,29 @@
 #define SCALE_FACTOR 5000
 @implementation MotionController
 
+@synthesize parentController;
+
+static int zeroes = 0;
 static float velocityX = 0;
 static float velocityY = 0;
-static float frequency = 60.0;
+static float frequency = 1000.0;
 static float sendFrequency = 20.0;
+
++(float)velocityX{
+    return velocityX;   
+}
+
++(float)velocityY{
+    return velocityY;
+}
 
 - (id)init{
 	self = [super init];
 	motionManager = [[CMMotionManager alloc] init]; 
 	motionManager.accelerometerUpdateInterval = 1.0/frequency;
     motionManager.deviceMotionUpdateInterval = 1.0/frequency;
+    
+
     
     [motionManager startDeviceMotionUpdates];
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0/frequency target:self selector:@selector(getData:) userInfo:nil repeats:YES];
@@ -38,13 +51,13 @@ static float sendFrequency = 20.0;
     //velocityX = 0;
     //velocityY = 0;
     
-    NSLog(@"%.6f, %.6f", acceleration.x, acceleration.y);
+    //NSLog(@"%.6f, %.6f", acceleration.x, acceleration.y);
     
     float ax = acceleration.x;
     float ay = acceleration.y;
-    if(abs(ax) < 0.01)
+    if(abs(ax) < 0.00001)
         ax = 0;
-    if(abs(ay) < 0.01)
+    if(abs(ay) < 0.00001)
         ay = 0;
 
     
@@ -52,9 +65,17 @@ static float sendFrequency = 20.0;
     velocityY += (1.0/frequency) * ay;
     
     if(ax == 0 && ay == 0){
-        velocityX = 0;
-        velocityY = 0;
+        zeroes++;
+        if(zeroes > 5){
+            velocityX = 0;
+            velocityY = 0;
+        }
+    } else{
+        zeroes = 0;
     }
+    
+    
+    [parentController didGetData];
     
 
 }

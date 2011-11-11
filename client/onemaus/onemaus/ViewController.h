@@ -8,12 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "MouseButton.h"
+#import "VelocityView.h"
 
 @interface ViewController : UIViewController {
     IBOutlet MouseButton* leftButton;
     IBOutlet MouseButton* rightButton;
+    IBOutlet VelocityView* velocityView;
     int currentX;
     int currentY;
 }
+
+- (void)didGetData;
 
 @end

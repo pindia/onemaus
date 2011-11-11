@@ -26,6 +26,7 @@
     leftButton.mouseButton = 1;
     rightButton.mouseButton = 2;
     MotionController *motion = [[MotionController alloc]init];
+    motion.parentController = self;
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -66,4 +67,9 @@
         return YES;
     }
 }
+
+- (void)didGetData{
+    [velocityView setNeedsDisplay];
+}
+
 @end

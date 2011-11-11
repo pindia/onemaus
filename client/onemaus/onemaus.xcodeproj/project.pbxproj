@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B628A5A146D914F00C09A98 /* VelocityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B628A59146D914F00C09A98 /* VelocityView.m */; };
 		91A3A9AE146CC8630002E52B /* ServerCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A3A9AD146CC8630002E52B /* ServerCommunication.m */; };
 		91A3A9BA146CF2740002E52B /* MotionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A3A9B9146CF2740002E52B /* MotionController.m */; };
 		91A3A9BD146CFEEF0002E52B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A3A9BC146CFEEF0002E52B /* CoreMotion.framework */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B628A58146D914F00C09A98 /* VelocityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VelocityView.h; sourceTree = "<group>"; };
+		3B628A59146D914F00C09A98 /* VelocityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VelocityView.m; sourceTree = "<group>"; };
 		91A3A9AC146CC8630002E52B /* ServerCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerCommunication.h; sourceTree = "<group>"; };
 		91A3A9AD146CC8630002E52B /* ServerCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerCommunication.m; sourceTree = "<group>"; };
 		91A3A9B8146CF2740002E52B /* MotionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotionController.h; sourceTree = "<group>"; };
@@ -105,6 +108,8 @@
 				91A3A9AD146CC8630002E52B /* ServerCommunication.m */,
 				91A3A9B8146CF2740002E52B /* MotionController.h */,
 				91A3A9B9146CF2740002E52B /* MotionController.m */,
+				3B628A58146D914F00C09A98 /* VelocityView.h */,
+				3B628A59146D914F00C09A98 /* VelocityView.m */,
 			);
 			path = onemaus;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 				FB7FF190146CBFDB002739B5 /* MouseButton.m in Sources */,
 				91A3A9AE146CC8630002E52B /* ServerCommunication.m in Sources */,
 				91A3A9BA146CF2740002E52B /* MotionController.m in Sources */,
+				3B628A5A146D914F00C09A98 /* VelocityView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

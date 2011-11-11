@@ -13,10 +13,18 @@
 @interface MotionController : NSObject{
 
     CMMotionManager *motionManager;
+    ViewController* parentController;
     NSTimer* timer;
     NSTimer* sendTimer;
 
     
     
 }
+
+
++(float)velocityX;
++(float)velocityY;
+
+@property (readwrite, retain) ViewController* parentController;
+
 @end
