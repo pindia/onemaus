@@ -23,6 +23,7 @@ class click:
 class resolution:        
     def GET(self):
         return json.dumps(controller.screen_resolution())
+    
 class screen:        
     def GET(self):
         web.header('Content-Type', 'image/png')
