@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB7FF190146CBFDB002739B5 /* MouseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7FF18F146CBFDB002739B5 /* MouseButton.m */; };
 		FB99A48D146CB32D004A4C37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB99A48C146CB32D004A4C37 /* UIKit.framework */; };
 		FB99A48F146CB32D004A4C37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB99A48E146CB32D004A4C37 /* Foundation.framework */; };
 		FB99A491146CB32D004A4C37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB99A490146CB32D004A4C37 /* CoreGraphics.framework */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB7FF18E146CBFDB002739B5 /* MouseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MouseButton.h; sourceTree = "<group>"; };
+		FB7FF18F146CBFDB002739B5 /* MouseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MouseButton.m; sourceTree = "<group>"; };
 		FB99A488146CB32D004A4C37 /* onemaus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onemaus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB99A48C146CB32D004A4C37 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB99A48E146CB32D004A4C37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -84,6 +87,8 @@
 				FB99A49E146CB32D004A4C37 /* ViewController.h */,
 				FB99A49F146CB32D004A4C37 /* ViewController.m */,
 				FB99A4A1146CB32D004A4C37 /* ViewController_iPhone.xib */,
+				FB7FF18E146CBFDB002739B5 /* MouseButton.h */,
+				FB7FF18F146CBFDB002739B5 /* MouseButton.m */,
 				FB99A4A4146CB32D004A4C37 /* ViewController_iPad.xib */,
 				FB99A493146CB32D004A4C37 /* Supporting Files */,
 			);
@@ -167,6 +172,7 @@
 				FB99A499146CB32D004A4C37 /* main.m in Sources */,
 				FB99A49D146CB32D004A4C37 /* AppDelegate.m in Sources */,
 				FB99A4A0146CB32D004A4C37 /* ViewController.m in Sources */,
+				FB7FF190146CBFDB002739B5 /* MouseButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +294,7 @@
 				FB99A4AB146CB32D004A4C37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

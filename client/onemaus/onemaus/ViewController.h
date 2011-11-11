@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MouseButton.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    IBOutlet MouseButton* leftButton;
+    IBOutlet MouseButton* rightButton;
+}
 
 @end

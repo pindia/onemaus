@@ -21,6 +21,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    leftButton.mouseButton = 0;
+    rightButton.mouseButton = 1;
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -60,5 +62,4 @@
         return YES;
     }
 }
-
 @end
