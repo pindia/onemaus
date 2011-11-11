@@ -10,9 +10,9 @@
 
 @implementation ServerCommunication
 
-static float currentX = 10;
-static float currentY = 10;
-const static NSString *serverIP = @"localhost:8080";
+static float currentX = 100;
+static float currentY = 100;
+const static NSString *serverIP = @"75.102.65.203:8080";
 
 + (void)clickWithButton:(int)button
 {

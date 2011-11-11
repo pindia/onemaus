@@ -25,7 +25,7 @@
     [super viewDidLoad];
     leftButton.mouseButton = 1;
     rightButton.mouseButton = 2;
-    MotionController *motion = [MotionController init];
+    MotionController *motion = [[MotionController alloc]init];
     
 	// Do any additional setup after loading the view, typically from a nib.
 }

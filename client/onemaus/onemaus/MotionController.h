@@ -14,6 +14,7 @@
 
     CMMotionManager *motionManager;
     NSTimer* timer;
+    NSTimer* sendTimer;
 
     
     

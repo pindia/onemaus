@@ -8,12 +8,13 @@
 
 #import "MotionController.h"
 #import "ServerCommunication.h"
-#define SCALE_FACTOR 10000
+#define SCALE_FACTOR 5000
 @implementation MotionController
 
 static float velocityX = 0;
 static float velocityY = 0;
-static float frequency = 50.0;
+static float frequency = 60.0;
+static float sendFrequency = 20.0;
 
 - (id)init{
 	self = [super init];
@@ -23,6 +24,7 @@ static float frequency = 50.0;
     
     [motionManager startDeviceMotionUpdates];
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0/frequency target:self selector:@selector(getData:) userInfo:nil repeats:YES];
+    sendTimer = [NSTimer scheduledTimerWithTimeInterval:1.0/sendFrequency target:self selector:@selector(sendData:) userInfo:nil repeats:YES];
 
     
 	return self;
@@ -33,13 +35,39 @@ static float frequency = 50.0;
     CMDeviceMotion* deviceMotion = [motionManager deviceMotion];
 	CMAcceleration acceleration = deviceMotion.userAcceleration;
     
-    velocityX += (1.0/frequency) * acceleration.x;
-    velocityY += (1.0/frequency) * acceleration.y;
+    //velocityX = 0;
+    //velocityY = 0;
     
-    float dx = velocityX / frequency *  SCALE_FACTOR;
-    float dy = velocityY / frequency *  SCALE_FACTOR;
+    NSLog(@"%.6f, %.6f", acceleration.x, acceleration.y);
+    
+    float ax = acceleration.x;
+    float ay = acceleration.y;
+    if(abs(ax) < 0.01)
+        ax = 0;
+    if(abs(ay) < 0.01)
+        ay = 0;
+
+    
+    velocityX += (1.0/frequency) * ax;
+    velocityY += (1.0/frequency) * ay;
+    
+    if(ax == 0 && ay == 0){
+        velocityX = 0;
+        velocityY = 0;
+    }
+    
+
+}
+
+- (void)sendData:(NSTimer*)theTimer
+{
+    float dx = velocityX / sendFrequency *  SCALE_FACTOR;
+    float dy = velocityY / sendFrequency *  SCALE_FACTOR;
+    
+    //NSLog(@"%.2f, %.2f", dx, dy);
     
     [ServerCommunication move:dx :dy];
+    
 }
 
 @end
