@@ -1,4 +1,4 @@
-import objc, time
+import objc, time, tempfile, os
 from AppKit import NSScreen
 
 def clickMouse(x, y, button):
@@ -15,4 +15,13 @@ def moveMouse(x, y):
 def screenResolution():
     s = NSScreen.mainScreen().frame()
     return {'width': s.size.width, 'height':s.size.height}
+
+def captureScreen():
+    f, path = tempfile.mkstemp()
+    os.system('screencapture %s' % path)
+    f = open(path, 'rb')
+    data = f.read()
+    f.close()
+    os.unlink(path)
+    return data
     

@@ -1,7 +1,7 @@
 import time, json
 import BaseHTTPServer
 
-from controller import moveMouse, clickMouse, screenResolution
+from controller import moveMouse, clickMouse, screenResolution, captureScreen
 
 HOST_NAME = '0.0.0.0' # !!!REMEMBER TO CHANGE THIS!!!
 PORT_NUMBER = 8080 # Maybe set this to 9000.
@@ -17,6 +17,15 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         print args
         
         s.send_response(200)
+        
+        if args[0] == 'screen':
+            data = captureScreen()
+            s.send_header("Content-type", "image/png")
+            s.end_headers()
+            s.wfile.write(data)
+            return
+        
+        
         s.send_header("Content-type", "text/html")
         s.end_headers()
         
