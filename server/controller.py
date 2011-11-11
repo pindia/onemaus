@@ -1,5 +1,5 @@
 import objc, time, tempfile, os
-from AppKit import NSScreen
+from AppKit import NSScreen, NSPasteboard, NSArray, NSString
 
 def click_mouse(x, y, button):
     bndl = objc.loadBundle('CoreGraphics', globals(), '/System/Library/Frameworks/ApplicationServices.framework')
@@ -15,6 +15,10 @@ def move_mouse(x, y):
 def screen_resolution():
     s = NSScreen.mainScreen().frame()
     return {'width': s.size.width, 'height':s.size.height}
+'''
+def capture_screen():
+    os.system('screencapture -x -c')'''
+
 
 def capture_screen():
     f, path = tempfile.mkstemp()
@@ -24,4 +28,6 @@ def capture_screen():
     f.close()
     os.unlink(path)
     return data
-    
+
+if __name__ == '__main__':
+    capture_screen()    
