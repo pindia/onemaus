@@ -1,57 +1,32 @@
 import time, json
-import BaseHTTPServer
+import web
 
-from controller import moveMouse, clickMouse, screenResolution, captureScreen
+import controller
 
-HOST_NAME = '0.0.0.0' # !!!REMEMBER TO CHANGE THIS!!!
-PORT_NUMBER = 8080 # Maybe set this to 9000.
+urls = (
+    '/move/([0-9]+)/([0-9]+)', 'move',
+    '/click/([0-9]+)/([0-9]+)/([0-9])', 'click',
+    '/resolution', 'resolution',
+    '/screen', 'screen'
+)
 
+app = web.application(urls, globals())
 
-class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
-    def do_GET(s):
-        args = s.path.split('/')[1:]
-        #if len(args) < 3:
-        #    s.send_response(404)
-        #    return
+class move:        
+    def GET(self, x, y):
+        controller.move_mouse(int(x), int(y)) 
+          
+class click:        
+    def GET(self, x, y, button):
+        controller.click_mouse(int(x), int(y), int(button)) 
         
-        print args
-        
-        s.send_response(200)
-        
-        if args[0] == 'screen':
-            data = captureScreen()
-            s.send_header("Content-type", "image/png")
-            s.end_headers()
-            s.wfile.write(data)
-            return
-        
-        
-        s.send_header("Content-type", "text/html")
-        s.end_headers()
-        
-        if args[0] == 'move':
-            x = int(args[1])
-            y = int(args[2])
-            moveMouse(x, y)
-        if args[0] == 'click':
-            x = int(args[1])
-            y = int(args[2])
-            button = int(args[3])
-            clickMouse(x, y, button)
-        if args[0] == 'resolution':
-            s.wfile.write(json.dumps(screenResolution()))
-            
-        """Respond to a GET request."""
+class resolution:        
+    def GET(self):
+        return json.dumps(controller.screen_resolution())
+class screen:        
+    def GET(self):
+        web.header('Content-Type', 'image/png')
+        return controller.capture_screen()
 
-
-
-if __name__ == '__main__':
-    server_class = BaseHTTPServer.HTTPServer
-    httpd = server_class((HOST_NAME, PORT_NUMBER), MyHandler)
-    print time.asctime(), "Server Starts - %s:%s" % (HOST_NAME, PORT_NUMBER)
-    try:
-        httpd.serve_forever()
-    except KeyboardInterrupt:
-        pass
-    httpd.server_close()
-    print time.asctime(), "Server Stops - %s:%s" % (HOST_NAME, PORT_NUMBER)
+if __name__ == "__main__":
+    app.run()
