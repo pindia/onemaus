@@ -4,8 +4,9 @@ from AppKit import NSScreen, NSPasteboard, NSArray, NSString, NSAutoreleasePool
 def autopooled(f):
     def pooled_func(*args):
         pool = NSAutoreleasePool.alloc().init()
-        f(*args)
+        data = f(*args)
         del pool
+        return data
     return pooled_func
 
 @autopooled
