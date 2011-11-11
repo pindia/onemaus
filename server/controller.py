@@ -11,7 +11,3 @@ def moveMouse(x, y):
     objc.loadBundleFunctions(bndl, globals(), [('CGWarpMouseCursorPosition', 'v{CGPoint=ff}')])
     CGWarpMouseCursorPosition((x, y))
     
-while True:
-    time.sleep(1)
-    moveMouse(100, 100)
-    
