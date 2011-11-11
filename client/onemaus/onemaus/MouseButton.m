@@ -7,7 +7,7 @@
 //
 
 #import "MouseButton.h"
-
+#import "ServerCommunication.h"
 @implementation MouseButton
 
 @synthesize mouseButton;
@@ -21,6 +21,7 @@
 {
     [super touchesEnded:touches withEvent:event];
     NSLog(@"strings%d", mouseButton);
+    [ServerCommunication clickWithButton:mouseButton];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

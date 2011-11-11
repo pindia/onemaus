@@ -10,7 +10,8 @@
 
 @interface ServerCommunication : NSObject
 
-+ (void)leftClick:(int)xPos:(int)yPos;
-+ (void)rightClick:(int)xPos:(int)yPos;
-+ (void)move:(int)xPos:(int)yPos:(int)buttonId;
++ (void)clickWithButton:(int)button;
++ (void)move:(float)dX:(float)dY;
+
+
 @end

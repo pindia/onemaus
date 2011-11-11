@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ServerCommunication.h"
 
 @implementation ViewController
 
@@ -21,8 +22,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    leftButton.mouseButton = 0;
-    rightButton.mouseButton = 1;
+    leftButton.mouseButton = 1;
+    rightButton.mouseButton = 2;
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

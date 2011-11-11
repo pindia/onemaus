@@ -12,6 +12,8 @@
 @interface ViewController : UIViewController {
     IBOutlet MouseButton* leftButton;
     IBOutlet MouseButton* rightButton;
+    int currentX;
+    int currentY;
 }
 
 @end

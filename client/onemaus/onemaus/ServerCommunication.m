@@ -10,17 +10,24 @@
 
 @implementation ServerCommunication
 
-+ (void)leftClick:(int)xPos:(int)yPos
-{
-    
-}
-+ (void)rightClick:(int)xPos:(int)yPos
-{
+static float currentX = 10;
+static float currentY = 10;
+const static NSString *serverIP = @"localhost:8080";
 
-}
-+ (void)move:(int)xPos:(int)yPos:(int)buttonId
++ (void)clickWithButton:(int)button
 {
-    
+    //NSlog(@"left click");
+    NSURL *command = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/click/%d/%d/%d",serverIP,(int)currentX,(int)currentY,button]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:command];
+    NSURLConnection *connection = [NSURLConnection connectionWithRequest:request delegate:self];
+    [connection start];
+}
++ (void)move:(float)xPos:(float)yPos
+{
+    NSURL *command = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/move/%i/%d/%d",serverIP,(int)currentX,(int)currentY,2]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:command];
+    NSURLConnection *connection = [NSURLConnection connectionWithRequest:request delegate:self];
+    [connection start];
 }
 
 
