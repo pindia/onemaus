@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB99A48D146CB32D004A4C37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB99A48C146CB32D004A4C37 /* UIKit.framework */; };
+		FB99A48F146CB32D004A4C37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB99A48E146CB32D004A4C37 /* Foundation.framework */; };
+		FB99A491146CB32D004A4C37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB99A490146CB32D004A4C37 /* CoreGraphics.framework */; };
+		FB99A497146CB32D004A4C37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB99A495146CB32D004A4C37 /* InfoPlist.strings */; };
+		FB99A499146CB32D004A4C37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB99A498146CB32D004A4C37 /* main.m */; };
+		FB99A49D146CB32D004A4C37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB99A49C146CB32D004A4C37 /* AppDelegate.m */; };
+		FB99A4A0146CB32D004A4C37 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB99A49F146CB32D004A4C37 /* ViewController.m */; };
+		FB99A4A3146CB32D004A4C37 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB99A4A1146CB32D004A4C37 /* ViewController_iPhone.xib */; };
+		FB99A4A6146CB32D004A4C37 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB99A4A4146CB32D004A4C37 /* ViewController_iPad.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FB99A488146CB32D004A4C37 /* onemaus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onemaus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB99A48C146CB32D004A4C37 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FB99A48E146CB32D004A4C37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB99A490146CB32D004A4C37 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FB99A494146CB32D004A4C37 /* onemaus-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "onemaus-Info.plist"; sourceTree = "<group>"; };
+		FB99A496146CB32D004A4C37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB99A498146CB32D004A4C37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB99A49A146CB32D004A4C37 /* onemaus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "onemaus-Prefix.pch"; sourceTree = "<group>"; };
+		FB99A49B146CB32D004A4C37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FB99A49C146CB32D004A4C37 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FB99A49E146CB32D004A4C37 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FB99A49F146CB32D004A4C37 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FB99A4A2146CB32D004A4C37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		FB99A4A5146CB32D004A4C37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB99A485146CB32D004A4C37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB99A48D146CB32D004A4C37 /* UIKit.framework in Frameworks */,
+				FB99A48F146CB32D004A4C37 /* Foundation.framework in Frameworks */,
+				FB99A491146CB32D004A4C37 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB99A47D146CB32D004A4C37 = {
+			isa = PBXGroup;
+			children = (
+				FB99A492146CB32D004A4C37 /* onemaus */,
+				FB99A48B146CB32D004A4C37 /* Frameworks */,
+				FB99A489146CB32D004A4C37 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB99A489146CB32D004A4C37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB99A488146CB32D004A4C37 /* onemaus.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB99A48B146CB32D004A4C37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB99A48C146CB32D004A4C37 /* UIKit.framework */,
+				FB99A48E146CB32D004A4C37 /* Foundation.framework */,
+				FB99A490146CB32D004A4C37 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB99A492146CB32D004A4C37 /* onemaus */ = {
+			isa = PBXGroup;
+			children = (
+				FB99A49B146CB32D004A4C37 /* AppDelegate.h */,
+				FB99A49C146CB32D004A4C37 /* AppDelegate.m */,
+				FB99A49E146CB32D004A4C37 /* ViewController.h */,
+				FB99A49F146CB32D004A4C37 /* ViewController.m */,
+				FB99A4A1146CB32D004A4C37 /* ViewController_iPhone.xib */,
+				FB99A4A4146CB32D004A4C37 /* ViewController_iPad.xib */,
+				FB99A493146CB32D004A4C37 /* Supporting Files */,
+			);
+			path = onemaus;
+			sourceTree = "<group>";
+		};
+		FB99A493146CB32D004A4C37 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB99A494146CB32D004A4C37 /* onemaus-Info.plist */,
+				FB99A495146CB32D004A4C37 /* InfoPlist.strings */,
+				FB99A498146CB32D004A4C37 /* main.m */,
+				FB99A49A146CB32D004A4C37 /* onemaus-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB99A487146CB32D004A4C37 /* onemaus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB99A4A9146CB32D004A4C37 /* Build configuration list for PBXNativeTarget "onemaus" */;
+			buildPhases = (
+				FB99A484146CB32D004A4C37 /* Sources */,
+				FB99A485146CB32D004A4C37 /* Frameworks */,
+				FB99A486146CB32D004A4C37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = onemaus;
+			productName = onemaus;
+			productReference = FB99A488146CB32D004A4C37 /* onemaus.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB99A47F146CB32D004A4C37 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = FB99A482146CB32D004A4C37 /* Build configuration list for PBXProject "onemaus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FB99A47D146CB32D004A4C37;
+			productRefGroup = FB99A489146CB32D004A4C37 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB99A487146CB32D004A4C37 /* onemaus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB99A486146CB32D004A4C37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB99A497146CB32D004A4C37 /* InfoPlist.strings in Resources */,
+				FB99A4A3146CB32D004A4C37 /* ViewController_iPhone.xib in Resources */,
+				FB99A4A6146CB32D004A4C37 /* ViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB99A484146CB32D004A4C37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB99A499146CB32D004A4C37 /* main.m in Sources */,
+				FB99A49D146CB32D004A4C37 /* AppDelegate.m in Sources */,
+				FB99A4A0146CB32D004A4C37 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FB99A495146CB32D004A4C37 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB99A496146CB32D004A4C37 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FB99A4A1146CB32D004A4C37 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB99A4A2146CB32D004A4C37 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		FB99A4A4146CB32D004A4C37 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB99A4A5146CB32D004A4C37 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB99A4A7146CB32D004A4C37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FB99A4A8146CB32D004A4C37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB99A4AA146CB32D004A4C37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "onemaus/onemaus-Prefix.pch";
+				INFOPLIST_FILE = "onemaus/onemaus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FB99A4AB146CB32D004A4C37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "onemaus/onemaus-Prefix.pch";
+				INFOPLIST_FILE = "onemaus/onemaus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB99A482146CB32D004A4C37 /* Build configuration list for PBXProject "onemaus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB99A4A7146CB32D004A4C37 /* Debug */,
+				FB99A4A8146CB32D004A4C37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB99A4A9146CB32D004A4C37 /* Build configuration list for PBXNativeTarget "onemaus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB99A4AA146CB32D004A4C37 /* Debug */,
+				FB99A4AB146CB32D004A4C37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB99A47F146CB32D004A4C37 /* Project object */;
+}
