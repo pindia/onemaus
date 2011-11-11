@@ -22,9 +22,17 @@ const static NSString *serverIP = @"localhost:8080";
     NSURLConnection *connection = [NSURLConnection connectionWithRequest:request delegate:self];
     [connection start];
 }
-+ (void)move:(float)xPos:(float)yPos
+
+//+ (void)requestDidFinishLoading...
+//connect = false
+//request did fail load aca
+
++ (void)move:(float)dX:(float)dY
 {
-    NSURL *command = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/move/%i/%d/%d",serverIP,(int)currentX,(int)currentY,2]];
+    currentX += dX;
+    currentY += dY;
+    
+    NSURL *command = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/move/%d/%d",serverIP,(int)currentX,(int)currentY]];
     NSURLRequest *request = [NSURLRequest requestWithURL:command];
     NSURLConnection *connection = [NSURLConnection connectionWithRequest:request delegate:self];
     [connection start];

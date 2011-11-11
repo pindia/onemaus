@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		91A3A9AE146CC8630002E52B /* ServerCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A3A9AD146CC8630002E52B /* ServerCommunication.m */; };
+		91A3A9BA146CF2740002E52B /* MotionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A3A9B9146CF2740002E52B /* MotionController.m */; };
+		91A3A9BD146CFEEF0002E52B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A3A9BC146CFEEF0002E52B /* CoreMotion.framework */; };
 		FB7FF190146CBFDB002739B5 /* MouseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7FF18F146CBFDB002739B5 /* MouseButton.m */; };
 		FB99A48D146CB32D004A4C37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB99A48C146CB32D004A4C37 /* UIKit.framework */; };
 		FB99A48F146CB32D004A4C37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB99A48E146CB32D004A4C37 /* Foundation.framework */; };
@@ -23,6 +25,9 @@
 /* Begin PBXFileReference section */
 		91A3A9AC146CC8630002E52B /* ServerCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerCommunication.h; sourceTree = "<group>"; };
 		91A3A9AD146CC8630002E52B /* ServerCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerCommunication.m; sourceTree = "<group>"; };
+		91A3A9B8146CF2740002E52B /* MotionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotionController.h; sourceTree = "<group>"; };
+		91A3A9B9146CF2740002E52B /* MotionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionController.m; sourceTree = "<group>"; };
+		91A3A9BC146CFEEF0002E52B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		FB7FF18E146CBFDB002739B5 /* MouseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MouseButton.h; sourceTree = "<group>"; };
 		FB7FF18F146CBFDB002739B5 /* MouseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MouseButton.m; sourceTree = "<group>"; };
 		FB99A488146CB32D004A4C37 /* onemaus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onemaus.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91A3A9BD146CFEEF0002E52B /* CoreMotion.framework in Frameworks */,
 				FB99A48D146CB32D004A4C37 /* UIKit.framework in Frameworks */,
 				FB99A48F146CB32D004A4C37 /* Foundation.framework in Frameworks */,
 				FB99A491146CB32D004A4C37 /* CoreGraphics.framework in Frameworks */,
@@ -58,6 +64,7 @@
 		FB99A47D146CB32D004A4C37 = {
 			isa = PBXGroup;
 			children = (
+				91A3A9BC146CFEEF0002E52B /* CoreMotion.framework */,
 				FB99A492146CB32D004A4C37 /* onemaus */,
 				FB99A48B146CB32D004A4C37 /* Frameworks */,
 				FB99A489146CB32D004A4C37 /* Products */,
@@ -96,6 +103,8 @@
 				FB99A493146CB32D004A4C37 /* Supporting Files */,
 				91A3A9AC146CC8630002E52B /* ServerCommunication.h */,
 				91A3A9AD146CC8630002E52B /* ServerCommunication.m */,
+				91A3A9B8146CF2740002E52B /* MotionController.h */,
+				91A3A9B9146CF2740002E52B /* MotionController.m */,
 			);
 			path = onemaus;
 			sourceTree = "<group>";
@@ -179,6 +188,7 @@
 				FB99A4A0146CB32D004A4C37 /* ViewController.m in Sources */,
 				FB7FF190146CBFDB002739B5 /* MouseButton.m in Sources */,
 				91A3A9AE146CC8630002E52B /* ServerCommunication.m in Sources */,
+				91A3A9BA146CF2740002E52B /* MotionController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ServerCommunication.h"
+#import "MotionController.h"
 
 @implementation ViewController
 
@@ -24,6 +25,7 @@
     [super viewDidLoad];
     leftButton.mouseButton = 1;
     rightButton.mouseButton = 2;
+    MotionController *motion = [MotionController init];
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
