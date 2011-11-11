@@ -12,6 +12,11 @@
 
 + (void)clickWithButton:(int)button;
 + (void)move:(float)dX:(float)dY;
++ (void)connect;
 
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error;
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection;
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response;
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data;
 
 @end

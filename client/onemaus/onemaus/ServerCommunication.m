@@ -12,7 +12,8 @@
 
 static float currentX = 100;
 static float currentY = 100;
-const static NSString *serverIP = @"75.102.65.203:8080";
+static bool connected = false;
+const static NSString *serverIP = @"localhost:8080";
 
 + (void)clickWithButton:(int)button
 {
@@ -38,5 +39,33 @@ const static NSString *serverIP = @"75.102.65.203:8080";
     [connection start];
 }
 
++ (void)connect
+{    
+    NSURL *command = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/resolution",serverIP]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:command];
+    NSURLConnection *connection = [NSURLConnection connectionWithRequest:request delegate:self];
+    [connection start];
+}
 
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+	NSLog(@"Failed to load connection");
+    connected = false;
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    NSLog(@"Did finish loading %@", [connection description]);
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    NSLog(@"Did receive response %@", [response description]);
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    NSLog(@"did receive data %@", [data description]);
+}
+       
 @end

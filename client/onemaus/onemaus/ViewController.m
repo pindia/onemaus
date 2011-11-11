@@ -25,6 +25,9 @@
     [super viewDidLoad];
     leftButton.mouseButton = 1;
     rightButton.mouseButton = 2;
+    
+    [ServerCommunication connect]; 
+    
     MotionController *motion = [[MotionController alloc]init];
     motion.parentController = self;
     
